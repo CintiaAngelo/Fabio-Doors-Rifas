@@ -1,47 +1,47 @@
-<nav class="bg-secondary text-light py-4 shadow-lg">
+<nav class="bg-navbar-bg text-navbar-text py-4 shadow-lg">
     <div class="container mx-auto px-4 flex justify-between items-center">
         <div class="flex items-center space-x-2">
-            <i data-feather="award" class="text-primary"></i>
-            <h1 class="text-2xl font-bold">FÁBIO DOORS <span class="text-primary">RIFAS</span></h1>
+            <i data-feather="award" class="text-accent-red"></i>
+            <h1 class="text-2xl font-bold">FÁBIO DOORS <span class="text-accent-red">RIFAS</span></h1>
         </div>
         <div class="hidden md:flex space-x-6">
-            <a href="#destaque" class="hover:text-primary transition">Destaque</a>
-            <a href="#proximos" class="hover:text-primary transition">Próximos Sorteios</a>
-            <a href="#sorteados" class="hover:text-primary transition">Já Sorteados</a>
-            <a href="#contato" class="hover:text-primary transition">Contato</a>
+            <a href="#destaque" class="hover:text-accent-red transition">Destaque</a>
+            <a href="#proximos" class="hover:text-accent-red transition">Próximos Sorteios</a>
+            <a href="#sorteados" class="hover:text-accent-red transition">Já Sorteados</a>
+            <a href="#contato" class="hover:text-accent-red transition">Contato</a>
         </div>
-        <button class="md:hidden">
+        <button class="md:hidden text-navbar-text">
             <i data-feather="menu"></i>
         </button>
     </div>
 </nav>
 
 <section class="hero-bg h-96 flex items-center relative">
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-    <div class="container mx-auto px-4 z-10 text-center text-light">
+    <div class="absolute inset-0 bg-black-dark bg-opacity-70"></div>
+    <div class="container mx-auto px-4 z-10 text-center text-navbar-text">
         <h1 class="text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up">SORTEIOS DE PEÇAS AUTOMOTIVAS</h1>
         <p class="text-xl mb-8" data-aos="fade-up" data-aos-delay="100">Participe e tenha a chance de ganhar peças premium para seu carro</p>
-        <a href="#proximos" class="bg-primary hover:bg-red-700 text-light font-bold py-3 px-6 rounded-lg inline-block transition" data-aos="fade-up" data-aos-delay="200">VER ITENS</a>
+        <a href="#proximos" class="bg-accent-red hover:bg-accent-dark-red text-white-pure font-bold py-3 px-6 rounded-lg inline-block transition" data-aos="fade-up" data-aos-delay="200">VER ITENS</a>
     </div>
 </section>
 
-<section id="destaque" class="py-16 bg-light">
+<section id="destaque" class="py-16 bg-main-bg">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">ITEM EM <span class="text-primary">DESTAQUE</span></h2>
+        <h2 class="text-3xl font-bold text-center mb-12 text-main-text" data-aos="fade-up">ITEM EM <span class="text-accent-red">DESTAQUE</span></h2>
         
-        <div class="flex flex-col md:flex-row items-center bg-secondary rounded-xl overflow-hidden shadow-xl" data-aos="zoom-in">
+        <div class="flex flex-col md:flex-row items-center bg-card-bg rounded-xl overflow-hidden shadow-xl" data-aos="zoom-in">
             <div class="md:w-1/2">
                 <img src="http://static.photos/automotive/640x360/5" alt="Item em destaque" class="w-full h-full object-cover">
             </div>
-            <div class="md:w-1/2 p-8 text-light">
+            <div class="md:w-1/2 p-8 text-main-text">
                 <h3 class="text-2xl font-bold mb-4">KIT COMPLETO PORTAS BMW SÉRIE 3</h3>
                 <p class="mb-6">Kit premium para BMW Série 3, incluindo todas as peças originais para instalação profissional.</p>
                 <div class="mb-6">
-                    <p class="text-primary font-bold">VALOR DA RIFA: R$ 50,00</p>
+                    <p class="text-accent-red font-bold">VALOR DA RIFA: R$ 50,00</p>
                     <p>NÚMEROS DISPONÍVEIS: 100</p>
                 </div>
                 <p class="mb-6">SORTEIO: 15/12/2023</p>
-                <button (click)="openRifaModal({title: 'Kit Completo Portas BMW Série 3', price: 50, numbers: 100, date: '15/12/2023'})" class="bg-primary hover:bg-red-700 text-light font-bold py-3 px-6 rounded-lg inline-block transition">
+                <button (click)="openRifaModal(rifas[0])" class="bg-accent-red hover:bg-accent-dark-red text-white-pure font-bold py-3 px-6 rounded-lg inline-block transition">
                     PARTICIPAR AGORA <i data-feather="arrow-right" class="inline ml-2"></i>
                 </button>
             </div>
@@ -49,90 +49,60 @@
     </div>
 </section>
 
-<section id="proximos" class="py-16 bg-gray-100">
+<section id="proximos" class="py-16 bg-gray-medium">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">PRÓXIMOS <span class="text-primary">SORTEIOS</span></h2>
+        <h2 class="text-3xl font-bold text-center mb-12 text-main-text" data-aos="fade-up">PRÓXIMOS <span class="text-accent-red">SORTEIOS</span></h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg item-card" data-aos="fade-up">
-                <img src="http://static.photos/automotive/640x360/2" alt="Farol dianteiro" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">FAROL DIANTEIRO AUDI A3</h3>
-                    <p class="text-gray-600 mb-4">Farol original com tecnologia LED para Audi A3 2015-2020.</p>
-                    <div class="mb-4">
-                        <p class="text-primary font-bold">R$ 30,00</p>
-                        <p>100 números disponíveis</p>
+            @for (rifa of rifas; track rifa.title) {
+                <div class="bg-card-bg rounded-lg overflow-hidden shadow-lg item-card" data-aos="fade-up">
+                    <img [src]="rifa.image" [alt]="rifa.title" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-main-text">{{ rifa.title }}</h3>
+                        <p class="text-main-text mb-4">{{ rifa.description }}</p>
+                        <div class="mb-4">
+                            <p class="text-accent-red font-bold">R$ {{ rifa.price.toFixed(2) }}</p>
+                            <p class="text-main-text">{{ rifa.numbers }} números disponíveis</p>
+                        </div>
+                        <p class="text-sm mb-4 text-main-text">Sorteio: {{ rifa.date }}</p>
+                        <button (click)="openRifaModal(rifa)" class="bg-black-dark hover:bg-black-medium text-white-pure font-bold py-2 px-4 rounded-lg inline-block transition text-sm w-full text-center">
+                            PARTICIPAR <i data-feather="shopping-cart" class="inline ml-1"></i>
+                        </button>
                     </div>
-                    <p class="text-sm mb-4">Sorteio: 10/12/2023</p>
-                    <button (click)="openRifaModal({title: 'Farol Dianteiro Audi A3', price: 30, numbers: 100, date: '10/12/2023'})" class="bg-secondary hover:bg-black text-light font-bold py-2 px-4 rounded-lg inline-block transition text-sm w-full text-center">
-                        PARTICIPAR <i data-feather="shopping-cart" class="inline ml-1"></i>
-                    </button>
                 </div>
-            </div>
-
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg item-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="http://static.photos/automotive/640x360/3" alt="Retrovisor" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">RETROVISOR VW GOL</h3>
-                    <p class="text-gray-600 mb-4">Retrovisor elétrico esquerdo original para VW Gol 2010-2019.</p>
-                    <div class="mb-4">
-                        <p class="text-primary font-bold">R$ 25,00</p>
-                        <p>80 números disponíveis</p>
-                    </div>
-                    <p class="text-sm mb-4">Sorteio: 12/12/2023</p>
-                    <button (click)="openRifaModal({title: 'Retrovisor VW Gol', price: 25, numbers: 80, date: '12/12/2023'})" class="bg-secondary hover:bg-black text-light font-bold py-2 px-4 rounded-lg inline-block transition text-sm w-full text-center">
-                        PARTICIPAR <i data-feather="shopping-cart" class="inline ml-1"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg item-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="http://static.photos/automotive/640x360/4" alt="Tampa de porta" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">TAMPA DE PORTA HONDA CIVIC</h3>
-                    <p class="text-gray-600 mb-4">Tampa de porta dianteira direita para Honda Civic 2016-2021.</p>
-                    <div class="mb-4">
-                        <p class="text-primary font-bold">R$ 40,00</p>
-                        <p>120 números disponíveis</p>
-                    </div>
-                    <p class="text-sm mb-4">Sorteio: 18/12/2023</p>
-                    <button (click)="openRifaModal({title: 'Tampa de Porta Honda Civic', price: 40, numbers: 120, date: '18/12/2023'})" class="bg-secondary hover:bg-black text-light font-bold py-2 px-4 rounded-lg inline-block transition text-sm w-full text-center">
-                        PARTICIPAR <i data-feather="shopping-cart" class="inline ml-1"></i>
-                    </button>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>
 
-<section id="sorteados" class="py-16 bg-light">
+<section id="sorteados" class="py-16 bg-main-bg">
     <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">ITENS <span class="text-primary">JÁ SORTEADOS</span></h2>
+        <h2 class="text-3xl font-bold text-center mb-12 text-main-text" data-aos="fade-up">ITENS <span class="text-accent-red">JÁ SORTEADOS</span></h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg" data-aos="fade-right">
+            <div class="bg-card-bg rounded-lg overflow-hidden shadow-lg" data-aos="fade-right">
                 <img src="http://static.photos/automotive/640x360/6" alt="Item sorteado" class="w-full h-48 object-cover">
-                <div class="p-6">
+                <div class="p-6 text-main-text">
                     <h3 class="text-xl font-bold mb-2">PARACHOQUE DIANTEIRO COROLLA</h3>
-                    <p class="text-gray-600 mb-4">Sorteado em: 01/11/2023</p>
+                    <p class="mb-4">Sorteado em: 01/11/2023</p>
                     <div class="mb-4">
                         <p class="font-bold">Ganhador: Carlos Silva (Nº 47)</p>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg">
+                    <div class="bg-testimonial-bg p-4 rounded-lg text-testimonial-text">
                         <p class="italic">"Não acreditava quando recebi a ligação! Peça chegou perfeita e já está instalada no meu Corolla. Recomendo demais as rifas do Fábio!"</p>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg" data-aos="fade-left">
+            <div class="bg-card-bg rounded-lg overflow-hidden shadow-lg" data-aos="fade-left">
                 <img src="http://static.photos/automotive/640x360/7" alt="Item sorteado" class="w-full h-48 object-cover">
-                <div class="p-6">
+                <div class="p-6 text-main-text">
                     <h3 class="text-xl font-bold mb-2">KIT VIDROS ELÉTRICOS FIESTA</h3>
-                    <p class="text-gray-600 mb-4">Sorteado em: 15/11/2023</p>
+                    <p class="mb-4">Sorteado em: 15/11/2023</p>
                     <div class="mb-4">
                         <p class="font-bold">Ganhador: Ana Oliveira (Nº 12)</p>
                     </div>
-                    <div class="bg-gray-100 p-4 rounded-lg">
+                    <div class="bg-testimonial-bg p-4 rounded-lg text-testimonial-text">
                         <p class="italic">"Estava precisando muito desse kit para meu Fiesta. O atendimento foi excelente e a entrega super rápida. Já estou participando de outros sorteios!"</p>
                     </div>
                 </div>
@@ -141,26 +111,26 @@
     </div>
 </section>
 
-<footer id="contato" class="bg-secondary text-light py-12">
+<footer class="bg-navbar-bg text-navbar-text py-12">
     <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
                 <h3 class="text-xl font-bold mb-4">FÁBIO DOORS RIFAS</h3>
                 <p class="mb-4">Sorteios semanais de peças automotivas de qualidade.</p>
                 <div class="flex space-x-4">
-                    <a href="#" class="hover:text-primary transition"><i data-feather="facebook"></i></a>
-                    <a href="#" class="hover:text-primary transition"><i data-feather="instagram"></i></a>
-                    <a href="#" class="hover:text-primary transition"><i data-feather="youtube"></i></a>
+                    <a href="#" class="hover:text-accent-red transition"><i data-feather="facebook"></i></a>
+                    <a href="#" class="hover:text-accent-red transition"><i data-feather="instagram"></i></a>
+                    <a href="#" class="hover:text-accent-red transition"><i data-feather="youtube"></i></a>
                 </div>
             </div>
             
             <div>
                 <h3 class="text-xl font-bold mb-4">MEIOS DE PAGAMENTO</h3>
                 <ul class="space-y-2">
-                    <li class="flex items-center"><i data-feather="check-circle" class="mr-2 text-primary"></i> Pix</li>
-                    <li class="flex items-center"><i data-feather="check-circle" class="mr-2 text-primary"></i> Cartão de Crédito</li>
-                    <li class="flex items-center"><i data-feather="check-circle" class="mr-2 text-primary"></i> Transferência Bancária</li>
-                    <li class="flex items-center"><i data-feather="check-circle" class="mr-2 text-primary"></i> Boleto Bancário</li>
+                    <li class="flex items-center"><i data-feather="check-circle" class="mr-2 text-accent-red"></i> Pix</li>
+                    <li class="flex items-center"><i data-feather="check-circle" class="mr-2 text-accent-red"></i> Cartão de Crédito</li>
+                    <li class="flex items-center"><i data-feather="check-circle" class="mr-2 text-accent-red"></i> Transferência Bancária</li>
+                    <li class="flex items-center"><i data-feather="check-circle" class="mr-2 text-accent-red"></i> Boleto Bancário</li>
                 </ul>
             </div>
             
@@ -169,91 +139,89 @@
                 <p class="mb-2"><i data-feather="phone" class="inline mr-2"></i> (11) 99999-9999</p>
                 <p class="mb-2"><i data-feather="mail" class="inline mr-2"></i> contato&#64;fabiodoors.com</p>
                 <p><i data-feather="map-pin" class="inline mr-2"></i> São Paulo - SP</p>
-                <a href="https://wa.me/5511987984175" target="_blank" class="mt-4 bg-primary hover:bg-red-700 text-light font-bold py-2 px-4 rounded-lg inline-block transition ">
+                <a href="https://wa.me/5511999999999" class="mt-4 bg-accent-red hover:bg-accent-dark-red text-white-pure font-bold py-2 px-4 rounded-lg inline-block transition">
                     FALE CONOSCO <i data-feather="message-circle" class="inline ml-1"></i>
                 </a>
             </div>
         </div>
         
-        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+        <div class="border-t border-border-color mt-8 pt-8 text-center">
             <p>&copy; 2023 Fábio Doors Rifas. Todos os direitos reservados.</p>
         </div>
     </div>
 </footer>
 
-@if (isModalOpen) {
-  <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-      <div class="p-6">
-        <div class="flex justify-between items-center mb-4">
-          <h3 id="modalTitle" class="text-2xl font-bold text-secondary">{{ selectedRifa?.title }}</h3>
-          <button (click)="closeRifaModal()" class="text-gray-500 hover:text-secondary">
-            <i data-feather="x"></i>
-          </button>
+<div [ngClass]="{'hidden': !isModalOpen}" class="fixed inset-0 bg-black-dark bg-opacity-70 flex items-center justify-center z-50">
+  <div class="bg-card-bg rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+    <div class="p-6">
+      <div class="flex justify-between items-center mb-4">
+        <h3 id="modalTitle" class="text-2xl font-bold text-main-text">{{ selectedRifa?.title }}</h3>
+        <button (click)="closeRifaModal()" class="text-gray-light hover:text-main-text">
+          <i data-feather="x"></i>
+        </button>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <h4 class="font-bold mb-2 text-main-text">INFORMAÇÕES</h4>
+          <p id="modalDescription" class="mb-4 text-main-text">{{ selectedRifa?.description }}</p>
+          <p class="text-accent-red font-bold" id="modalPrice">VALOR DA RIFA: R$ {{ selectedRifa?.price?.toFixed(2) }}</p>
+          <p id="modalNumbers" class="text-main-text">NÚMEROS DISPONÍVEIS: {{ selectedRifa?.numbers }}</p>
+          <p id="modalDate" class="mb-4 text-main-text">SORTEIO: {{ selectedRifa?.date }}</p>
+          
+          <div class="mb-4">
+            <h4 class="font-bold mb-2 text-main-text">ESCOLHA SEUS NÚMEROS</h4>
+            <div id="numbersGrid" class="grid grid-cols-10 gap-2 mb-4">
+              @for (number of totalNumbersArray; track number) {
+                <button 
+                  [ngClass]="{'bg-accent-red text-white-pure': selectedNumbers.includes(number), 'bg-gray-medium text-main-text hover:bg-gray-light': !selectedNumbers.includes(number)}"
+                  (click)="toggleNumberSelection(number)"
+                  class="w-8 h-8 rounded-full border border-border-color transition flex items-center justify-center">
+                  {{ number }}
+                </button>
+              }
+            </div>
+            <p 
+              [ngClass]="{'text-accent-red font-medium': selectedNumbers.length > 0, 'text-border-color': selectedNumbers.length === 0}" 
+              class="text-sm text-main-text">
+              {{ selectedNumbers.length > 0 ? 'Números selecionados: ' + selectedNumbers.join(', ') : 'Nenhum número selecionado' }}
+            </p>
+          </div>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <h4 class="font-bold mb-2">INFORMAÇÕES</h4>
-            <p id="modalDescription" class="mb-4"></p>
-            <p class="text-primary font-bold" id="modalPrice">VALOR DA RIFA: R$ {{ selectedRifa?.price?.toFixed(2) }}</p>
-            <p id="modalNumbers">NÚMEROS DISPONÍVEIS: {{ selectedRifa?.numbers }}</p>
-            <p id="modalDate" class="mb-4">SORTEIO: {{ selectedRifa?.date }}</p>
-            
-            <div class="mb-4">
-              <h4 class="font-bold mb-2">ESCOLHA SEUS NÚMEROS</h4>
-              <div id="numbersGrid" class="grid grid-cols-10 gap-2 mb-4">
-                @for (number of totalNumbersArray; track number) {
-                  <button 
-                    [ngClass]="{'bg-primary text-white': selectedNumbers.includes(number)}"
-                    (click)="toggleNumberSelection(number)"
-                    class="w-8 h-8 rounded-full border hover:bg-gray-100 transition">
-                    {{ number }}
-                  </button>
-                }
-              </div>
-              <p 
-                [ngClass]="{'text-primary font-medium': selectedNumbers.length > 0, 'text-gray-600': selectedNumbers.length === 0}" 
-                class="text-sm">
-                {{ selectedNumbers.length > 0 ? 'Números selecionados: ' + selectedNumbers.join(', ') : 'Nenhum número selecionado' }}
-              </p>
+        <div>
+          <h4 class="font-bold mb-2 text-main-text">DADOS PARA PAGAMENTO</h4>
+          <form (submit)="submitPayment($event)" class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium mb-1 text-main-text">Nome Completo</label>
+              <input type="text" required class="w-full px-3 py-2 border border-border-color rounded-lg bg-main-bg text-main-text">
             </div>
-          </div>
-          
-          <div>
-            <h4 class="font-bold mb-2">DADOS PARA PAGAMENTO</h4>
-            <form (submit)="submitPayment($event)" class="space-y-4">
-              <div>
-                <label class="block text-sm font-medium mb-1">Nome Completo</label>
-                <input type="text" required class="w-full px-3 py-2 border rounded-lg">
-              </div>
-              <div>
-                <label class="block text-sm font-medium mb-1">CPF</label>
-                <input type="text" required class="w-full px-3 py-2 border rounded-lg">
-              </div>
-              <div>
-                <label class="block text-sm font-medium mb-1">E-mail</label>
-                <input type="email" required class="w-full px-3 py-2 border rounded-lg">
-              </div>
-              <div>
-                <label class="block text-sm font-medium mb-1">Telefone</label>
-                <input type="tel" required class="w-full px-3 py-2 border rounded-lg">
-              </div>
-              <div>
-                <label class="block text-sm font-medium mb-1">Forma de Pagamento</label>
-                <select class="w-full px-3 py-2 border rounded-lg">
-                  <option>Pix</option>
-                  <option>Cartão de Crédito</option>
-                  <option>Boleto Bancário</option>
-                </select>
-              </div>
-              <button type="submit" class="w-full bg-primary hover:bg-red-700 text-light font-bold py-3 px-6 rounded-lg transition">
-                CONCLUIR COMPRA
-              </button>
-            </form>
-          </div>
+            <div>
+              <label class="block text-sm font-medium mb-1 text-main-text">CPF</label>
+              <input type="text" required class="w-full px-3 py-2 border border-border-color rounded-lg bg-main-bg text-main-text">
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1 text-main-text">E-mail</label>
+              <input type="email" required class="w-full px-3 py-2 border border-border-color rounded-lg bg-main-bg text-main-text">
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1 text-main-text">Telefone</label>
+              <input type="tel" required class="w-full px-3 py-2 border border-border-color rounded-lg bg-main-bg text-main-text">
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1 text-main-text">Forma de Pagamento</label>
+              <select class="w-full px-3 py-2 border border-border-color rounded-lg bg-main-bg text-main-text">
+                <option>Pix</option>
+                <option>Cartão de Crédito</option>
+                <option>Boleto Bancário</option>
+              </select>
+            </div>
+            <button type="submit" class="w-full bg-accent-red hover:bg-accent-dark-red text-white-pure font-bold py-3 px-6 rounded-lg transition">
+              CONCLUIR COMPRA
+            </button>
+          </form>
         </div>
       </div>
     </div>
   </div>
-}
+</div>
