@@ -1,0 +1,11 @@
+.hero-bg {
+    background-image: url('http://static.photos/automotive/1200x630/1');
+    background-size: cover;
+    background-position: center;
+}
+.item-card {
+    transition: transform 0.3s ease;
+}
+.item-card:hover {
+    transform: translateY(-5px);
+}
